@@ -1,0 +1,69 @@
+# Arquivos de configuração
+config.php
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Dependências
+/vendor/
+/node_modules/
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+/logs/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Arquivos de cache
+/cache/
+*.cache
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# Arquivos de configuração local
+config.local.php
+database.local.php
+
+# Arquivos de sessão
+/sessions/
+
+# Arquivos de upload
+/uploads/
+/media/
+
+# Arquivos compilados
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Arquivos de pacote
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip 

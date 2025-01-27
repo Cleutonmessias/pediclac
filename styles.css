@@ -1,0 +1,370 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --accent-color: #FFD93D;
+    --background-color: #E8F3FF;
+    --success-color: #95E1D3;
+    --warning-color: #FCE38A;
+    --text-color: #6C5CE7;
+    --card-shadow: 0 8px 30px rgba(108, 92, 231, 0.15);
+}
+
+/* Estilos gerais */
+body {
+    background-color: var(--background-color);
+    font-family: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50l20-20M30 70l20-20M70 30l-20 20' stroke='%234ECDC4' stroke-width='2' stroke-linecap='round' stroke-opacity='0.2'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30m-15 0a15 15 0 1 0 30 0a15 15 0 1 0 -30 0' fill='%23FFD93D' fill-opacity='0.1'/%3E%3C/svg%3E");
+    color: var(--text-color);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Cards */
+.card {
+    border-radius: 30px;
+    border: 3px solid var(--secondary-color);
+    box-shadow: var(--card-shadow);
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card::before {
+    content: '🌈';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 2rem;
+    animation: rotate 3s linear infinite;
+}
+
+.card::after {
+    content: '⭐';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 2rem;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(108, 92, 231, 0.25);
+    border-color: var(--primary-color);
+}
+
+/* Botões */
+.btn {
+    border-radius: 50px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.btn::before {
+    content: '✨';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.btn::after {
+    content: '✨';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--success-color), #27AE60);
+    box-shadow: 0 4px 15px rgba(46,204,113,0.3);
+}
+
+/* Campos de formulário */
+.form-control {
+    border-radius: 25px;
+    border: 4px solid var(--accent-color);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 5px rgba(255, 107, 107, 0.2);
+    transform: scale(1.02);
+}
+
+/* Prescrição */
+.prescricao {
+    font-family: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+    white-space: pre;
+    padding: 40px;
+    background: #fff url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20m-8 0a8 8 0 1 0 16 0a8 8 0 1 0 -16 0' fill='%23FFD93D' fill-opacity='0.1'/%3E%3C/svg%3E");
+    border: 5px dashed var(--accent-color);
+    border-radius: 30px;
+    margin: 30px 0;
+    position: relative;
+    box-shadow: inset 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.prescricao::before {
+    content: '👨‍⚕️';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    font-size: 3rem;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.prescricao::after {
+    content: '💊';
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+    font-size: 3rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Mascote */
+.mascote {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 200px;
+    filter: drop-shadow(0 8px 20px rgba(108, 92, 231, 0.3));
+    animation: float 6s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.mascote:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 12px 30px rgba(108, 92, 231, 0.4));
+}
+
+/* Elementos de busca */
+.search-box {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+.search-input {
+    padding-left: 60px !important;
+    font-size: 1.3rem;
+    background: white url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h4v4H0V0zm8 0h4v4H8V0zm8 0h4v4h-4V0z' fill='%234ECDC4' fill-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* Cards de resultado */
+.result-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.result-card::before {
+    content: '💫';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    animation: rotate 3s linear infinite;
+}
+
+/* Novas Animações */
+@keyframes wave {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.3) rotate(10deg); }
+}
+
+@keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.3); }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+/* Loading animation */
+.loading {
+    width: 80px;
+    height: 80px;
+    border: 8px solid var(--accent-color);
+    border-top: 8px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    position: relative;
+}
+
+.loading::before {
+    content: '🏥';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+/* Efeitos de hover adicionais */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    animation: float 4s infinite;
+    color: white;
+    font-size: 1.8rem;
+    transform: rotate(-5deg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.icon-box:hover {
+    transform: rotate(5deg) scale(1.2);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+}
+
+/* Efeitos de foco */
+.form-control:focus + .search-icon {
+    transform: translateY(-50%) scale(1.2);
+    color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card {
+        margin: 20px 0;
+        border-radius: 25px;
+        padding: 15px;
+    }
+    
+    .mascote {
+        width: 150px;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .prescricao {
+        padding: 30px;
+        margin: 20px 0;
+    }
+}
+
+/* Impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .prescricao, .prescricao * {
+        visibility: visible;
+    }
+    .prescricao {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+    .prescricao::before,
+    .prescricao::after {
+        display: none;
+    }
+} 
