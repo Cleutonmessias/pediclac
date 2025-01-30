@@ -1,24 +1,14 @@
-# Arquivos de configuração
+# Arquivos de configuração local
 config.php
-
-# Arquivos de ambiente
 .env
-.env.local
-.env.*.local
-
-# Dependências
-/vendor/
-/node_modules/
-
-# Arquivos de IDE
-.idea/
-.vscode/
-*.sublime-workspace
-*.sublime-project
 
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# Dependências
+/vendor/
+node_modules/
 
 # Arquivos de log
 *.log
@@ -30,6 +20,12 @@ Thumbs.db
 *.swp
 *.swo
 
+# Arquivos de IDE/Editor
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
 # Arquivos de cache
 /cache/
 *.cache
@@ -39,7 +35,7 @@ Thumbs.db
 *.backup
 *~
 
-# Arquivos de configuração local
+# Arquivos de configuração
 config.local.php
 database.local.php
 

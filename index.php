@@ -1,5 +1,5 @@
 <?php
-require_once 'config.prod.php';
+require_once 'config.php';
 require_once 'calculos.php';
 
 // Função para obter medicamentos com suas categorias

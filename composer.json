@@ -1,6 +1,11 @@
 {
+    "name": "pedicalc/web",
+    "description": "Calculadora de Medicamentos Pediátricos",
     "require": {
-        "php": "^7.4",
+        "php": "^8.0",
         "ext-mysqli": "*"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
     }
 } 
